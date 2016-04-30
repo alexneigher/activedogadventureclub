@@ -11,7 +11,7 @@ class AdventureGroupsController < ApplicationController
 
   private
     def adventure_group_params
-      params.require(:adventure_group).permit(:pack_leader_id, :adventure_date)
+      params.require(:adventure_group).permit(:pack_leader_id, :adventure_date, :adventure_type_id)
     end
 
 end

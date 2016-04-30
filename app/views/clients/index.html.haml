@@ -1,0 +1,5 @@
+%ul.list-group
+  - @clients.each do |client|
+    %li.list-group-item
+      =client.name
+=link_to 'Add New Client', new_client_path

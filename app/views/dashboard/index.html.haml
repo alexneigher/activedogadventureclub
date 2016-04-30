@@ -5,9 +5,9 @@
   .col-md-3
     .well
       %ul.list-group
-        -6.times do
+        - @clients.each do |client|
           %li.list-group-item
-            =Faker::Name.first_name
+            =client.name
             .pull-right
             .dropdown.pull-right
               %i.fa.fa-truck{"data-toggle" => "dropdown", :type => "button"}

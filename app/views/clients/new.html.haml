@@ -1,0 +1,8 @@
+.well
+  =form_for @client, url: clients_path, method: :post do |f|
+    .form-group
+      %label Name
+      =f.text_field :name, class: 'form-control'
+    .form-group
+      =f.submit 'Create', class: 'btn btn-primary'
+
