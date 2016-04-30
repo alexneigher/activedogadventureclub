@@ -9,7 +9,10 @@
             .col-md-12
               .form-group
                 %label Time
-                =f.text_field :adventure_date
+                =f.text_field :adventure_date, class: 'form-control'
+              .form-group
+                %label Pack Leader
+                =f.select :pack_leader_id, options_for_select(PackLeader.all.map{|pl| [pl.name, pl.id]} )
             
 
       .modal-footer

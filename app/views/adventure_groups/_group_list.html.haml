@@ -1,5 +1,9 @@
 -adventure_groups.each do |adventure_group|
   %li
     %a{:href => "#"}
-      = adventure_group.pack_leader.name
-      = adventure_group.adventure_date.strftime('%d %b %Y %l:%M %p')
+      %strong
+        = adventure_group.pack_leader.name
+      %small
+        = adventure_group.adventure_date.strftime('%l:%M %p')
+      .pull-right
+        (0)
