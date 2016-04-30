@@ -9,7 +9,10 @@
           %li.list-group-item
             =Faker::Name.first_name
             .pull-right
-              %i.fa.fa-gear
+            .dropdown.pull-right
+              %i.fa.fa-truck{"data-toggle" => "dropdown", :type => "button"}
+              %ul.dropdown-menu.groups
+                =render partial: 'adventure_groups/group_list', locals: { adventure_groups: @adventure_groups }
   .col-md-9
     .row
       #adventure-groups

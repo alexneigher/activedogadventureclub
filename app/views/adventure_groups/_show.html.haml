@@ -1,4 +1,9 @@
 .col-md-4
   .well
     %strong Pack Leader
-    =adventure_group.adventure_date
+    Steve
+    %br
+    %strong Time
+    = adventure_group.adventure_date.strftime('%d %b %Y %l:%M %p')
+    %hr
+    Clients:
