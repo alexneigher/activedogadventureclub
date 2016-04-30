@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root 'dashboard#index'
   resources :pack_leaders
   resources :adventure_groups
+  resources :adventure_types
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

@@ -1,0 +1,6 @@
+%ul.list-group
+  - @adventure_types.each do |adventure_type|
+    %li.list-group-item
+      =adventure_type.name
+      = number_to_currency(adventure_type.price_per_day)
+=link_to 'Add New Adventure Type', new_adventure_type_path

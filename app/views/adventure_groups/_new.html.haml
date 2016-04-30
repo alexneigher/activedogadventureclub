@@ -13,7 +13,9 @@
               .form-group
                 %label Pack Leader
                 =f.select :pack_leader_id, options_for_select(PackLeader.all.map{|pl| [pl.name, pl.id]} ), {}, class: 'form-control'
-            
+              .form-group
+                %label Adventure Type
+                =f.select :adventure_type_id, options_for_select(AdventureType.all.map{|pl| [pl.name, pl.id]} ), {}, class: 'form-control'
 
       .modal-footer
         %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"} Close

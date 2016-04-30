@@ -1,0 +1,12 @@
+.well
+  =form_for @adventure_type, url: adventure_types_path, method: :post do |f|
+    .form-group
+      %label Name
+      =f.text_field :name, class: 'form-control'
+    .form-group
+      %label Price Per Day
+      =f.number_field :price_per_day, class: 'form-control'
+
+    .form-group
+      =f.submit 'Create', class: 'btn btn-primary'
+
