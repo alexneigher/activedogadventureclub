@@ -2,3 +2,9 @@
   - @pack_leaders.each do |pack_leader|
     %li.list-group-item
       =pack_leader.name
+      .pull-right
+        =link_to 'edit', edit_pack_leader_path(pack_leader)
+
+
+
+=link_to 'Add', new_pack_leader_path

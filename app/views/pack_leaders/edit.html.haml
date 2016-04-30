@@ -1,0 +1,5 @@
+.well
+  =form_for @pack_leader, url: pack_leader_path(@pack_leader), method: :put do |f|
+    %label Name
+    =f.text_field :name
+    =f.submit "Save", class: 'btn btn-primary'

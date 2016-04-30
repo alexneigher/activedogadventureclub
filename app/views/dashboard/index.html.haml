@@ -2,24 +2,22 @@
   .col-md-12
     %h4= Date.today.strftime('%A, %b %d')
 .row
-  -4.times do 
-    .col-md-3
-      .well
-        %strong Pack Leader:
-        =Faker::Name.name
-        %ul.list-group
+  .col-md-3
+    .well
+      %ul.list-group
+        -6.times do
           %li.list-group-item
             =Faker::Name.first_name
             .pull-right
               %i.fa.fa-gear
-          %li.list-group-item
-            =Faker::Name.first_name
-            .pull-right
-              %i.fa.fa-gear
-          %li.list-group-item
-            =Faker::Name.first_name
-            .pull-right
-              %i.fa.fa-gear
+  .col-md-9
+    .row
+      #adventure-groups
+        - @adventure_groups.each do |adventure_group|
+          = render partial: 'adventure_groups/show', locals: {adventure_group: adventure_group}
+    .row
+      .col-md-12
+        = link_to 'Add Group', new_adventure_group_path, remote: true
 
 
 %hr

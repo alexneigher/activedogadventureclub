@@ -1,0 +1,17 @@
+.modal-dialog
+  .modal-content
+    =form_for adventure_group, url: adventure_groups_path(adventure_group), method: :post, remote: true do |f|
+      .modal-body
+        .form-group
+          .row
+            = bootstrap_flash
+          .row
+            .col-md-12
+              .form-group
+                %label Time
+                =f.text_field :adventure_date
+            
+
+      .modal-footer
+        %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"} Close
+        =f.submit 'Add', class: 'btn btn-success'
