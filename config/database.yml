@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: active_dog_adventure_club_development
+
+test:
+  <<: *default
+  database: active_dog_adventure_club_test
+
+  production:
+  <<: *default
+  database: active_dog_adventure_club_production

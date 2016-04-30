@@ -1,0 +1,36 @@
+.row
+  .col-md-12
+    %h4= Date.today.strftime('%A, %b %d')
+.row
+  -4.times do 
+    .col-md-3
+      .well
+        %strong Pack Leader:
+        =Faker::Name.name
+        %ul.list-group
+          %li.list-group-item
+            =Faker::Name.first_name
+            .pull-right
+              %i.fa.fa-gear
+          %li.list-group-item
+            =Faker::Name.first_name
+            .pull-right
+              %i.fa.fa-gear
+          %li.list-group-item
+            =Faker::Name.first_name
+            .pull-right
+              %i.fa.fa-gear
+
+
+%hr
+
+.well
+  #main-calendar
+
+:javascript
+
+  $(function(){
+    $('#main-calendar').fullCalendar({
+      // put your options and callbacks here
+    })
+  })
